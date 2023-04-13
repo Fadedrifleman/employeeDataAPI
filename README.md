@@ -4,7 +4,7 @@ This is a Node.js API for managing employees and their emergency contacts.
 
 ## Getting Started
 
-1. Clone the repository: `git clone https://github.com/fadedrifleman/employeeDataApi.git`
+1. Clone the repository: `git clone https://github.com/Fadedrifleman/employeeDataAPI.git`
 2. Install the dependencies: `npm install`
 3. Set up the database:
    - Create a MySQL database called `employee_management_system`
@@ -15,7 +15,8 @@ This is a Node.js API for managing employees and their emergency contacts.
 ## Data Model
 
 The following is the data model for the Employee Management System:
-```
+
+```text
 - Employee
   - id (integer)
   - first_name (string)
@@ -56,10 +57,11 @@ The following is the data model for the Employee Management System:
 To create a new employee, send a POST request to `api/v1/employee` with the following JSON payload:
 
 `json`
-```
+
+```json
 {
   "employee": {
-    "full_name": "John"
+    "full_name": "John",
     "email": "johndoe@example.com",
     "phone_no": "555-555-5555",
     "job_title": "Software Engineer",
@@ -87,7 +89,8 @@ To get an employee by ID, send a GET request to `api/v1/employee/:id`. The respo
 To update an employee, send a PUT request to `api/v1/employee/:id` with the fields you want to update in the request body. For example, to update an employee's phone number, send the following JSON payload:
 
 `json`
-```
+
+```json
 {
   "employee": {
     "phone": "555-555-5555"
@@ -98,7 +101,8 @@ To update an employee, send a PUT request to `api/v1/employee/:id` with the fiel
 You can also update the employee's emergency contact by including the `emergencyContact` field in the request body. For example, to update the emergency contact's phone number, send the following JSON payload:
 
 `json`
-```
+
+```json
 {
   "emergencyContact": {
     "primary_contact_phone": "555-555-5555"
@@ -106,7 +110,20 @@ You can also update the employee's emergency contact by including the `emergency
 }
 ```
 
-Or you can update both employee and his emergencyContact at once, by including both `employee` and `emergencyContact` fields in the request body. For example,to update an employee's phone number andthe emergency contact's phone number, send the following json payload:
+Or you can update both employee and his emergencyContact at once, by including both `employee` and `emergencyContact` fields in the request body. For example,to update an employee's phone number and the emergency contact's phone number, send the following json payload:
+
+`json`
+
+```json
+{
+  "employee": {
+    "phone": "555-555-5555"
+  },
+  "emergencyContact": {
+    "primary_contact_phone": "555-555-5555"
+  }
+}
+```
 
 ### Delete Employee
 
