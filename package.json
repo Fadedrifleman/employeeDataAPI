@@ -1,0 +1,30 @@
+{
+	"name": "employeedataapi",
+	"version": "1.0.0",
+	"description": "## Tech stack",
+	"main": "app.js",
+	"directories": {
+		"test": "test"
+	},
+	"scripts": {
+		"start": "node app.js",
+		"build": "npm install",
+		"test": "mocha --require @babel/register --timeout 10000 --exit './test/**/*.test.js'"
+	},
+	"author": "Shivam Uttam-@fadedrifleman",
+	"license": "ISC",
+	"dependencies": {
+		"dotenv": "^16.0.3",
+		"express": "^4.18.2",
+		"mysql2": "^3.2.0",
+		"sequelize": "^6.31.0",
+		"sequelize-cli": "^6.6.0"
+	},
+	"devDependencies": {
+		"@babel/register": "^7.21.0",
+		"chai": "^4.3.7",
+		"chai-http": "^4.3.0",
+		"mocha": "^10.2.0",
+		"nodemon": "^2.0.22"
+	}
+}
