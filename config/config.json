@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "fadedrifleman",
-    "password": "Shivam@28",
-    "database": "fadedrifleman_db",
-    "host": "db4free.net",
+    "username": "Sampleuser",
+    "password": "tempPassword",
+    "database": "test",
+    "host": "localhost",
     "dialect": "mysql"
   }
 }
